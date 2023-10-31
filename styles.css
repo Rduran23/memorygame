@@ -3,9 +3,19 @@
     box-sizing: border-box;
 }
 
-:root {
-    --cardwidth: 150px;
-    --cardheight: 150px;
+
+@media only screen and (max-width: 600px) {
+    :root {
+        --cardwidth: 75px;
+        --cardheight: 75px;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    :root {
+        --cardwidth: 150px;
+        --cardheight: 150px;
+    }
 }
 
 
@@ -32,12 +42,12 @@ header {
 
 header .timer p{
     border-radius: 50%;
-    background-color: red;
+    background-color: white;
     padding: 10px 10px;
 }
 
 .game {
-    width: calc(var(--cardwidth) * 4 + 100px);
+    /* width: calc(var(--cardwidth) * 4 + 100px); */
     max-width: 100%;
     display: flex;
     flex-direction: row;
@@ -47,6 +57,27 @@ header .timer p{
     padding: 10px 0;
 }
 
+@media only screen and (max-width: 600px) {
+    .smallboard {
+        width: calc(var(--cardwidth) * 4 + 100px);
+    }
+    
+    .bigboard {
+        width: calc(var(--cardwidth) * 4 + 100px);
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .smallboard {
+        width: calc(var(--cardwidth) * 4 + 100px);
+    }
+    
+    .bigboard {
+        width: calc(var(--cardwidth) * 6 + 100px);
+    }
+}
+
+
 .game .card{
     position: relative;
     background-color: #3e5a9b;
@@ -55,7 +86,7 @@ header .timer p{
     border-radius: 6px;
     transform-style: preserve-3d;
     cursor: pointer;
-    transition: transform 2s ease;
+    transition: transform 1s ease;
 
 }
 
@@ -95,11 +126,11 @@ header .timer p{
     padding: 20px 0;
 }
 
-.footergame a{
+.footergame button{
     text-decoration: none;
     background: #1c2b5c;
     color: white;
-    font-size: 2em;
+    font-size: 1.4em;
     border: 1px solid white;
     padding: 10px 10px;
 }

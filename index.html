@@ -14,7 +14,7 @@
     </div> 
 
     <div class="timer">  <!-- temporizador  -->
-        <p>60</p>
+        <p style="visibility: hidden;">60</p>
     </div>
 
     <div class="score"> <!-- Puntuación partida actual  -->
@@ -26,13 +26,15 @@
     <button onclick="startGame(1)">Modo fácil</button>
     <button onclick="startGame(2)">Modo normal</button>
     <button onclick="startGame(3)">Modo dificil</button>
+    <button onclick="startGame(4)">Modo experto</button>
 </section>
 
-<section class="game"  style="display: none;">
+<section class="game smallboard" style="display: none;">
 
 </section>
 <section class="footergame"  style="display: none;">
-    <a href="#">Volver al menu principal</a>
+    <button class="returnToMenu">Volver al menú</button>
+    <button class="restartGame">Reiniciar juego</button>
 </section>
 
 <script src="script.js"></script>
